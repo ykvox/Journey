@@ -13,8 +13,8 @@ playsound minecraft:block.amethyst_block.break voice @a ~ ~ ~ 2 1
 playsound minecraft:block.bell.resonate voice @a ~ ~ ~ 2 2
 
 #GLOWING SIGN
-data modify block ~ ~ ~ front_text.has_glowing_text set value 1
-data modify block ~ ~ ~ back_text.has_glowing_text set value 1
+data modify block ~ ~ ~ front_text.has_glowing_text set value 1b
+data modify block ~ ~ ~ back_text.has_glowing_text set value 1b
 
 #par défaut, texte en BLANC (pour avoir titles blanc plutôt que noir)
 execute if data block ~ ~ ~ front_text{color:"black"} run data modify block ~ ~ ~ front_text.color set value "white"

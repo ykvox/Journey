@@ -3,6 +3,10 @@ execute as @a[gamemode=creative] at @s run tellraw @s [{"text":"originally from"
 execute as @a[gamemode=creative] at @s run tellraw @s {"text":" "}
 execute as @a[gamemode=creative] at @s run tellraw @s [{"text":"Sucessfully activated! ","color":"light_purple","bold":false},{"text":"Version is ","color":"gray","bold":false,"italic":true},{"text":"[","color":"white","bold":false,"italic":false},{"text":"2.0","color":"gold","bold":true},{"text":"]","color":"white","bold":false}]
 
+
+#auto break old signs
+execute as @e[tag=hope_title] at @s unless block ~ ~ ~ #minecraft:signs run function journey:sign_fx/break
+
 #sign id
 scoreboard objectives add jrn_sign_id dummy
 
